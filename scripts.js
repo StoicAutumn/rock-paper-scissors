@@ -1,0 +1,4 @@
+function getComputerChoice () {
+  const randomNumber = Math.random()
+  console.log(randomNumber)
+}
