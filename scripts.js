@@ -2,13 +2,15 @@
 let playerScore = 0;
 let computerScore = 0;
 
+alert ("Welcome to Rock, Paper, Scissors! Highest score after 5 rounds wins!")
+
 //Plays five rounds and declares winner
 function game() {
   for (let round = 1; round < 6; round++) {
     console.log ("Round: " + round)
     playRound()
     if (round === 5 && playerScore > computerScore) {
-        return "Congrats on beating your opponent!"
+        return "You won! Congrats on beating your opponent!"
     } else if (round === 5 && playerScore < computerScore) {
         return "You've lost but don't give up! Try again!"
     } else if (round === 5 && playerScore === computerScore) {
