@@ -1,9 +1,3 @@
-// Counter for score
-let playerScore = 0;
-let computerScore = 0;
-
-//alert ("Welcome to Rock, Paper, Scissors! Highest score after 5 rounds wins!")
-
 //Plays five rounds and declares winner
 /*
 function game() {
@@ -21,25 +15,13 @@ function game() {
 }
 console.log (game())
 */
-let rockButton = document.getElementById('rock');
-rockButton.addEventListener('click', () => {
-  let buttontext = rockButton.textContent;
-  let yourChoice = document.getElementById('user-choice');
-  yourChoice.append(buttontext);
-});
-
-let paperButton = document.getElementById('paper');
-paperButton.addEventListener('click', () => {
-  let buttontext = paperButton.textContent;
-  let yourChoice = document.getElementById('user-choice');
-  yourChoice.append(buttontext);
-});
-
-let scissorsButton = document.getElementById('scissors');
-scissorsButton.addEventListener('click', () => {
-  let buttontext = scissorsButton.textContent;
-  let yourChoice = document.getElementById('user-choice');
-  yourChoice.append(buttontext);
+const buttons = document.querySelectorAll(".choiceButtons");
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    let buttontext = button.textContent;
+    let playerChoice = document.querySelector('#player-choice');
+    playerChoice.append(buttontext);
+  });
 });
 
 // Plays one round of Rock, Paper, Scissors
