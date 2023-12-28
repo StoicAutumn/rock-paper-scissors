@@ -20,10 +20,7 @@ const buttons = document.querySelectorAll(".choiceButtons");
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
     let buttonText = button.textContent;
-    let playerChoice = document.querySelector('#player-choice');
-    playerChoice.append(buttonText);
-    playRound()
-
+    playRound();
 
     // Plays one round of Rock, Paper, Scissors
     function playRound() {
@@ -47,7 +44,13 @@ buttons.forEach((button) => {
           result = "You lose! " + computerSelection + " beats " + playerSelection //+
                 //"\nPlayer Score: " + playerScore +
                 //"\nOpponent Score: " + computerScore;
-      } 
+      }
+      let playerChoice = document.querySelector('#player-choice');
+      playerChoice.append(buttonText);
+      let computerChoice = document.querySelector('#computer-choice');
+      computerChoice.append(computerSelection);
+      let gameResult = document.querySelector('#game-result');
+      gameResult.append(result);
       console.log ("Player: " + playerSelection);
       console.log ("Opponent: " + computerSelection);
       console.log (result);
