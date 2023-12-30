@@ -1,9 +1,9 @@
-// Counter for score
+// Counter for score and round
 let playerScore = 0;
 let computerScore = 0;
 let round = 0;
 
-
+// Declares a winner after 5 rounds
 function declareWinner() {
   const winnerDisplay = document.querySelector('#winner');
   const finalRoundDisplay = document.querySelector('#round-count');
@@ -78,6 +78,7 @@ function getComputerChoice() {
   }
 };
 
+// Disables buttons after round 5
 function disableBtn() {
   document.querySelector('#rock').disabled = true;
   document.querySelector('#paper').disabled = true;
